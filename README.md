@@ -47,7 +47,7 @@ NGINX is great for shared hosting enviroments, so in the following example we're
     docker run \
     --name AutoCert \
     -d \
-    -e DOMAINS="site1.example.com, site2.example.com" \
+    -e DOMAINS="site1.example.com,site2.example.com" \
     -e EMAIL="youremailforcertbot@example.com" \
     -v /home/user/sites-volume:/var/www/ \
     -v /home/user/config-volume:/etc/autocert/configs/ \
