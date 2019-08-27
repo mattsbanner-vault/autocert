@@ -11,14 +11,14 @@ RUN \
     apt update -yq && \
     mkdir /etc/autocert && \
     mkdir /etc/autocert/configs && \
-    cd /etc/autocert/ && git clone https://github.com/mattsbanner/docker-nginx-certbot.git && \
+    cd /etc/autocert/ && git clone https://github.com/mattsbanner/autocert.git repo && \
     # Ensure we're up to date (build caching)
-    cd /etc/autocert/docker-nginx-certbot && git reset HEAD --hard && git pull && \ 
-    chmod 755 /etc/autocert/docker-nginx-certbot/run.sh
+    cd /etc/autocert/certbot/repo && git reset HEAD --hard && git pull && \ 
+    chmod 755 /etc/autocert/repo/run.sh
 
 VOLUME ["/var/www/html", "/etc/autocert/configs"]
 
 EXPOSE 80
 EXPOSE 443
 
-CMD /etc/autocert/docker-nginx-certbot/run.sh $DOMAINS $EMAIL && tail -f /dev/null
+CMD /etc/autocert/repo/run.sh $DOMAINS $EMAIL && tail -f /dev/null

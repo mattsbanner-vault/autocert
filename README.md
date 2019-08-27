@@ -47,7 +47,7 @@ NGINX is great for shared hosting enviroments, so in the following example we're
     * Replace `EMAIL` with a valid email for Cerbot notifications
     * Change both volume mounts to the correct directories. One for your sites, one for the NGINX configurations.
     * Change the port numbers to match what you have forwarded at your firewall (Optional)
-    
+
     ```
     docker run \
     --name AutoCert \
@@ -58,5 +58,5 @@ NGINX is great for shared hosting enviroments, so in the following example we're
     -v /home/user/config-volume:/etc/autocert/configs/ \
     -p 80:80 \
     -p 443:443 \
-    mattbanner/nginx-automated-ssl
+    mattbanner/autocert
     ```
