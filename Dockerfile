@@ -13,7 +13,7 @@ RUN \
     mkdir /etc/autocert/configs && \
     cd /etc/autocert/ && git clone https://github.com/mattsbanner/autocert.git repo && \
     # Ensure we're up to date (build caching)
-    cd /etc/autocert/certbot/repo && git reset HEAD --hard && git pull && \ 
+    cd /etc/autocert/repo && git reset HEAD --hard && git pull && \ 
     chmod 755 /etc/autocert/repo/run.sh
 
 VOLUME ["/var/www/html", "/etc/autocert/configs"]
