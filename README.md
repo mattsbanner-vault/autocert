@@ -52,15 +52,17 @@ NGINX is great for shared hosting enviroments, so in the following example we're
     -e DOMAINS="site1.example.com,site2.example.com" \
     -e EMAIL="youremailforcertbot@example.com" \
     -e COUNTRY="GB" \
+    -e BUILD="master" \
     -v /home/user/sites-volume:/var/www/ \
     -v /home/user/config-volume:/etc/autocert/configs/ \
     -p 80:80 \
     -p 443:443 \
-    mattbanner/autocert
+    mattbanner/autocert:latest
     ```
 
     * Fill `DOMAINS` with a comma-separated list of the domains you are hosting
     * Fill `EMAIL` with a valid email for Cerbot notifications
     * Fill `COUNTRY` with your two letter country code
+    * Fill `BUILD` with the tag you are using. If using latest, this needs to be master
     * Change both volume mounts to the correct directories. One for your sites, one for the NGINX configurations.
     * Change the port numbers to match what you have forwarded at your firewall (Optional)
