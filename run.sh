@@ -7,11 +7,8 @@ rm /etc/nginx/conf.d/default.conf
 # Remove the default sites html folder
 rm -rf /var/www/html
 
-# Create an SSL certificate for the default server block
+# Create a self signed certificate, should the user need it
 openssl req -subj "/C=$COUNTRY/" -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/private/default-server.key -out /etc/ssl/certs/default-server.crt
-
-# Copy over the default config
-cp /etc/autocert/repo/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy configs to conf.d
 cp -r /etc/autocert/configs/. /etc/nginx/conf.d/ 
