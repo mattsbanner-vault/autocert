@@ -14,7 +14,7 @@ openssl req -subj "/C=$COUNTRY/" -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/
 cp -r /etc/autocert/configs/. /etc/nginx/conf.d/ 
 
 # Run Certbot
-certbot --nginx --non-interactive --redirect --agree-tos -m $EMAIL --domains $DOMAINS
+certbot --nginx --non-interactive --redirect --expand --agree-tos -m $EMAIL --domains $DOMAINS
 
 # Restart NGINX
 service nginx restart
