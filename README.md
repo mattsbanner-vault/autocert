@@ -5,6 +5,9 @@ Rather than building this image from the ground up (Linux image with NGINX insta
 
 **All image tags are rebuilt weekly, keeping up to date with [nginx:stable](https://hub.docker.com/_/nginx)**
 
+## Issues
+Please report all issues on [GitHub](https://github.com/mattsbanner/autocert/issues)
+
 ## Install
 NGINX is great for shared hosting enviroments, so in the following example we're going to be hosting `site1.example.com` and `site2.example.com`.
 
