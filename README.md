@@ -5,7 +5,7 @@ Rather than building this image from the ground up (Linux image with NGINX insta
 
 **All image tags are rebuilt weekly, keeping up to date with [nginx:stable](https://hub.docker.com/_/nginx)**
 
-# Issues
+## Issues
 Please report all issues on [GitHub](https://github.com/mattsbanner/autocert/issues)
 
 ## Install
