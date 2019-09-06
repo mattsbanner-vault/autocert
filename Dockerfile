@@ -16,7 +16,7 @@ RUN \
     cd /etc/autocert/repo && git reset HEAD --hard && git pull && \ 
     chmod 755 /etc/autocert/repo/run.sh
 
-VOLUME ["/var/www/html", "/etc/autocert/configs", "/etc/letsencrypt"]
+VOLUME ["/var/www", "/etc/autocert/configs", "/etc/letsencrypt"]
 
 EXPOSE 80
 EXPOSE 443
