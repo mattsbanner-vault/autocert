@@ -55,8 +55,9 @@ NGINX is great for shared hosting enviroments, so in the following example we're
     -e DOMAINS="site1.example.com,site2.example.com" \
     -e EMAIL="youremailforcertbot@example.com" \
     -e COUNTRY="GB" \
-    -v /home/user/sites-volume:/var/www/ \
-    -v /home/user/config-volume:/etc/autocert/configs/ \
+    -v /home/user/container/sites:/var/www/ \
+    -v /home/user/container/nginx:/etc/autocert/configs/ \
+    -v /home/user/container/letsencrypt:/etc/letsencrypt \
     -p 80:80 \
     -p 443:443 \
     mattbanner/autocert:latest
@@ -65,5 +66,5 @@ NGINX is great for shared hosting enviroments, so in the following example we're
     * Fill `DOMAINS` with a comma-separated list of the domains you are hosting
     * Fill `EMAIL` with a valid email for Cerbot notifications
     * Fill `COUNTRY` with your two letter country code
-    * Change both volume mounts to the correct directories. One for your sites, one for the NGINX configurations.
+    * Change volume mounts to the correct directories. One for sites, one for Lets Encrypt and one for the NGINX configurations.
     * Change the port numbers to match what you have forwarded at your firewall (Optional)
