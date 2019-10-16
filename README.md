@@ -1,8 +1,6 @@
 # AutoCert
 AutoCert is an NGINX Docker Container with automatic Certbot SSL certificates.
 
-**All image tags are rebuilt weekly, keeping up to date with the parent [nginx:stable](https://hub.docker.com/_/nginx)**
-
 ## Issues
 Please report all issues on [GitHub](https://github.com/mattsbanner/autocert/issues) rather than DockerHub.
 
