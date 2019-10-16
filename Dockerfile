@@ -1,4 +1,4 @@
-FROM nginx:stable
+FROM mattbanner/nginx-base:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
@@ -6,7 +6,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 RUN \
     # Perform some updates and install the software we need
     apt update && apt upgrade -yq && \
-    apt install -y apt-utils software-properties-common git openssl nano && \
+    apt install -y apt-utils software-properties-common git nano && \
     apt install -y python3-acme python3-certbot python3-mock python3-openssl python3-pkg-resources python3-pyparsing python3-zope.interface && \
     apt install -y certbot python-certbot-nginx && \
     apt update -yq && \
