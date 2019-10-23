@@ -1,0 +1,21 @@
+nginx:
+  container_name: nginx-1
+  image: mattbanner/autocert:latest
+  volumes:
+    - "/root/docker/production/sites:/var/www/"
+    - "/root/docker/production/nginx-configs/:/etc/autocert/configs/"
+    - "/root/docker/production/letsencrypt/:/etc/letsencrypt/"
+  ports:
+    - 80:80
+    - 443:443
+  restart: always
+  environment:
+    - EMAIL=webmaster@banner.wtf
+    - SELFSIGN_ENABLED=true
+    - SELFSIGN_COUNTRY=
+    - SELFSIGN_STATE=
+    - SELFSIGN_DIS=
+    - SELFSIGN_CITY=
+    - SELFSIGN_COMMON_NAME=
+    - CERTBOT_ENABLED=true
+    - CERTBOT_DOMAINS=leanneparkinmakeup.co.uk,mattbanner.co.uk,www.mattbanner.co.uk,mattbanner.dev,www.mattbanner.dev
