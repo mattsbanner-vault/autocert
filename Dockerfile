@@ -27,7 +27,7 @@ RUN \
     # Run the setup script
     chmod 755 /etc/autocert/repo/run.sh
 
-VOLUME ["/var/www", "/etc/autocert/configs", "/etc/letsencrypt"]
+VOLUME ["/var/www/", "/etc/autocert/configs/", "/etc/letsencrypt/"]
 
 EXPOSE 80
 EXPOSE 443
