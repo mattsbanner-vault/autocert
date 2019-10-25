@@ -4,10 +4,6 @@
 # Remove the default NGINX configuration
 rm /etc/nginx/conf.d/default.conf
 
-# Remove the default sites html folder
-rm -rf /var/www/html
-
-
 # Sort out Self Sign variables
 if [$SELFSIGN_COUNTRY == '']
 then

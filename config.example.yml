@@ -1,0 +1,20 @@
+autocert:
+  globals:
+    mode: production
+    email: webmaster@banner.wtf
+  selfsign:
+    enabled: true
+    country: GB
+    state: Essex
+    dis: DIS # To be sorted
+    city: Braintree
+    common name: common
+  certbot:
+    enabled: true
+    mode: list # list or scrape
+    domains:
+      - leanneparkinmakeup.co.uk
+      - mattbanner.co.uk
+      - www.mattbanner.co.uk
+      - mattbanner.dev
+      - www.mattbanner.dev
