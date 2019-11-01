@@ -103,7 +103,7 @@ def scrape_nginx(): # Todo - Scrape NGINX configs for domains
 #######################################
 
 # Load the config
-config = load_yaml("/Users/mattbanner/Development/Docker/Images/autocert/config.example.yml")
+config = load_yaml("/etc/autocert/config.yml")
 
 # Set app mode to production if not defined in config
 if "mode" not in config["globals"]:
