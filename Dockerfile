@@ -17,7 +17,7 @@ RUN \
     # cd /etc/autocert/plugins/ && git clone https://github.com/mattsbanner/pretty-nginx.git && \
     # Ensure we're up to date (build caching)
     cd /etc/autocert/repo && git reset HEAD --hard && git pull && \
-    cd /etc/autocert/plugins/pretty-nginx && git reset HEAD --hard && git pull && \
+    # cd /etc/autocert/plugins/pretty-nginx && git reset HEAD --hard && git pull && \
     # Run the setup script
     chmod 755 /etc/autocert/repo/run.sh
 
