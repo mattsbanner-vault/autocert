@@ -134,7 +134,7 @@ if config['certbot']['enabled']:
         for domain in config['certbot']['domains']:
             domains = domains + domain + ',' # Todo Must be a neater way of concatenating in Python
 
-        # Todo Trim the last comma or just don't put it there in the first place
+        domains = domains[:-1] # Trim last comma
     else:
         domains = scrape_nginx()
 
