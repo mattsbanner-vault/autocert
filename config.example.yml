@@ -1,20 +1,17 @@
 globals:
-  mode: development # development or production
-  email: webmaster@banner.wtf
+  email: you@domain.com
 selfsign:
   enabled: true
   country: GB
   state: Essex
-  dis: DIS
-  city: Braintree
-  common: test
+  city: Chelmsford
+  common: domain.com
 certbot:
   enabled: false
-  redirect: true # Optional
-  mode: list # list or scrape
+  redirect: true
+  mode: list
   domains:
-    - leanneparkinmakeup.co.uk
-    - mattbanner.co.uk
-    - www.mattbanner.co.uk
-    - mattbanner.dev
-    - www.mattbanner.dev
+    - domain.com
+    - www.domain.com
+    - one.domain.com
+    - two.domain.com

@@ -45,7 +45,7 @@ def config_check():
 
     # Check selfsign has required (if enabled)
     if config["selfsign"]["enabled"]:
-        if not config_check_items('selfsign', ['country', 'state', 'dis', 'city', 'common']):
+        if not config_check_items('selfsign', ['country', 'state', 'city', 'common']):
             return 0
 
     # Default selfsign to false if not set
@@ -124,7 +124,6 @@ if config['selfsign']['enabled']:
          "/C=" + config['selfsign']['country'] +
          "/ST=" + config['selfsign']['state'] +
          "/L=" + config['selfsign']['city'] +
-         "/O=" + config['selfsign']['dis'] +
          "/CN=" + config['selfsign']['common'] +
          " -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/private/default-server.key -out /etc/ssl/certs/default-server.crt")
 
