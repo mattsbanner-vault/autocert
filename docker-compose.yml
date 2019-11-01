@@ -1,5 +1,5 @@
 nginx:
-  container_name: nginx-1
+  container_name: autocert
   image: mattbanner/autocert:latest
   volumes:
     - "/root/docker/production/sites:/var/www/"

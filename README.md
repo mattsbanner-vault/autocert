@@ -1,8 +1,13 @@
 # AutoCert
-AutoCert is an NGINX Docker Container with automatic Certbot SSL certificates.
+AutoCert is an NGINX Docker Container with automated Certbot and OpenSSL certificates.
 
 ## Issues
-Please report all issues on [GitHub](https://github.com/mattsbanner/autocert/issues) rather than DockerHub.
+Please report all issues on [GitHub](https://github.com/mattsbanner/autocert/issues). Comments on DockerHub are not monitored.
+
+## Configuration
+You will need to mount the configuration file to your Docker container. An example can be found in [config.example.yml](config.example.yml). The configuration file is required but not all of the attributes within are.
+
+If setting *selfsign* or *certbot* - enabled to false. All other attributes within that section can be removed.
 
 ## Install
 NGINX is great for shared hosting enviroments, so in the following example we're going to be hosting `site1.example.com` and `site2.example.com`.

@@ -4,7 +4,7 @@ RUN \
     # Perform some updates and install the software we need
     apt-get update && apt-get upgrade -yq && \
     apt-get install -y apt-utils software-properties-common git nano && \
-    apt-get install -y python3-acme python3-certbot python3-mock python3-openssl python3-pkg-resources python3-pyparsing python3-zope.interface && \
+    apt-get install -y python3 python3-acme python3-certbot python3-mock python3-openssl python3-pkg-resources python3-pyparsing python3-zope.interface && \
     apt-get install -y certbot python-certbot-nginx && \
     apt-get update -yq && \
     # Create some directories
@@ -25,4 +25,4 @@ VOLUME ["/var/www/", "/etc/autocert/configs/", "/etc/letsencrypt/"]
 EXPOSE 80
 EXPOSE 443
 
-CMD /etc/autocert/repo/run.sh $DOMAINS $EMAIL $COUNTRY && tail -f /dev/null
+CMD python3 /etc/autocert/repo/build.py && tail -f /dev/null
